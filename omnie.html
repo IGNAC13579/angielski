@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Website for english class</title>
+</head>
+<body>
+
+<header>
+  <h1>Bartosz Ignaczak</h1>
+</header>
+
+<nav>
+  <a href="#" class="tab active" onclick="showTab(event, 'o-mnie')">About me</a>
+  <a href="#" class="tab" onclick="showTab(event, 'projekty')">Interests and hobbies</a>
+</nav>
+
+<section id="o-mnie" class="active">
+  <h2>Who am I?</h2>
+  <p>My name is Bartek, I’m 18 years old and I live in Poznań, Poland. I’m currently studying at Technical School No. 19 in Poznań, where I’m pursuing a degree in IT (Information Technology). I’m also a scout, which has taught me a lot about leadership, teamwork, and responsibility. In my free time, I enjoy exploring my interests, which include technology, automotives, and outdoor activities. I’m always eager to learn new things and take on new challenges.</p>
+  <div class="galeria">
+    <img src="zdjecie1.png" alt="Zdjęcie 1">
+    <img src="zdjecie2.png" alt="Zdjęcie 2">
+  </div>
+</section>
+
+<section id="projekty">
+  <h2>Interests and hobbies</h2>
+  <p><ul>
+    <li>Scouting - I am a scout instructor, and I regularly take part in camps, trips, and hikes. During these adventures, I experience many unforgettable moments. Being involved in scouting allows me to explore nature, learn new skills, and share amazing experiences with others.</li>
+    <div class="galeria2">
+        <img src="harcerstwo1.png" alt="Zdjęcie 1">
+        <img src="harcerstwo2.png" alt="Zdjęcie 2">
+        <img src="harcerstwo3.png" alt="Zdjęcie 3">
+      </div>
+    <li>Automotives - I have a strong passion for motorization, and I own a motorcycle, which I enjoy riding in my free time. Additionally, I'm huge fan of Formula 1 and never miss a race. The thrill of speed and the technical aspects of motorsports captivate me, and I love keeping up with the latest developments in both motorcycle and car racing.</li>
+    <div class="galeria2">
+        <img src="zdjecie2.png" alt="Zdjęcie 1">
+        <img src="moto1.png" alt="Zdjęcie 2">
+      </div>
+    <li>Outdoor Activities - I love spending time outdoors, especially hiking in the mountains. Exploring places that offer breathtaking landscapes brings me a sense of peace and adventure. Whether it's a challenging mountain trail or a peaceful walk through nature, I always enjoy the beauty that the outdoors has to offer.</li>
+    <div class="galeria2">
+        <img src="zdjecie1.png" alt="Zdjęcie 1">
+        <img src="t1.JPG" alt="Zdjęcie 2">
+        <img src="t2.JPG" alt="Zdjęcie 3">
+      </div>
+  </ul></p>
+  
+</section>
+
+
+<script>
+  function showTab(event, tabId) {
+    event.preventDefault();
+
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+    event.currentTarget.classList.add('active');
+  }
+</script>
+
+</body>
+</html>
